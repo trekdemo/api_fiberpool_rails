@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-ApiFiberpoolRails::Application.config.secret_token = 'ebca1562bf048009ea30162a9f4e213429c8f76fbfa9652c891606d17a37016ae9e9bac59455f4a85322b28af04f047e296a30ba63b3322b6bdb9e5a9d42e6e9'
+ApiFiberpoolRails::Application.config.secret_token = '3434bd57772adca368725210e6d5080ed4a436a426863ed4f5c4d48dea28ea7f5b033733dded8309d1d5a69998af99de8e4cb59f41644b361b2165f36185ddec'
