@@ -1,0 +1,117 @@
+$ ab -n 1000 -c 50 http://api-fiberpool-rails.dev/listings                                                                                                                                                                                                                  1 ↵
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking api-fiberpool-rails.dev (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        thin
+Server Hostname:        api-fiberpool-rails.dev
+Server Port:            80
+
+Document Path:          /listings
+Document Length:        26073 bytes
+
+Concurrency Level:      50
+Time taken for tests:   18.141 seconds
+Complete requests:      1000
+Failed requests:        0
+Write errors:           0
+Total transferred:      26402000 bytes
+HTML transferred:       26073000 bytes
+Requests per second:    55.12 [#/sec] (mean)
+Time per request:       907.039 [ms] (mean)
+Time per request:       18.141 [ms] (mean, across all concurrent requests)
+Transfer rate:          1421.28 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       3
+Processing:   135  893 127.1    903    1300
+Waiting:      134  889 125.9    895    1298
+Total:        136  893 127.0    903    1301
+
+Percentage of the requests served within a certain time (ms)
+  50%    903
+  66%    942
+  75%    957
+  80%    967
+  90%   1021
+  95%   1051
+  98%   1143
+  99%   1163
+ 100%   1301 (longest request)
+
+
+
+$ ab -n 1000 -c 100 http://api-fiberpool-rails.dev/listings
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking api-fiberpool-rails.dev (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        thin
+Server Hostname:        api-fiberpool-rails.dev
+Server Port:            80
+
+Document Path:          /listings
+Document Length:        26073 bytes
+
+Concurrency Level:      100
+Time taken for tests:   17.144 seconds
+Complete requests:      1000
+Failed requests:        22
+   (Connect: 0, Receive: 0, Length: 22, Exceptions: 0)
+Write errors:           0
+Non-2xx responses:      22
+Total transferred:      25885924 bytes
+HTML transferred:       25560422 bytes
+Requests per second:    58.33 [#/sec] (mean)
+Time per request:       1714.373 [ms] (mean)
+Time per request:       17.144 [ms] (mean, across all concurrent requests)
+Transfer rate:          1474.55 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.8      0       3
+Processing:   105 1655 397.7   1713    2491
+Waiting:       97 1650 395.7   1707    2485
+Total:        108 1656 397.2   1713    2492
+WARNING: The median and mean for the initial connection time are not within a normal deviation
+        These results are probably not that reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%   1713
+  66%   1749
+  75%   1789
+  80%   1822
+  90%   2078
+  95%   2228
+  98%   2310
+  99%   2401
+ 100%   2492 (longest request)
