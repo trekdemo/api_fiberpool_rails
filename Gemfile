@@ -9,7 +9,12 @@ gem 'rails-api'
 
 gem 'pg'
 gem 'thin'
+
 gem 'active_model_serializers'
+
+gem 'rack-fiber_pool',       require: 'rack/fiber_pool'
+gem 'em-postgresql-adapter', github:  'sonicbee9/em-postgresql-adapter'
+gem 'em-synchrony',          require: %w(em-synchrony em-synchrony/activerecord)
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

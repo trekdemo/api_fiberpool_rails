@@ -59,5 +59,7 @@ module ApiFiberpoolRails
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    config.threadsafe!
+
   end
 end
